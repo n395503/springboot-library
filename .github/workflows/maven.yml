@@ -3,14 +3,19 @@ name: Build
 on:
   push:
     branches:
+      - master
       - develop
 
 jobs:
   build-with-jdk-11:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
+      #- uses: actions/checkout@v1
+      - uses: benauca/action-git@develop
+        env:
+          DRONE_REMOTE_URL: https://github.com/benauca/helloworld-execution-action.git
+          DRONE_COMMIT_BRANCH: develop 
+          #repository: ${{github.repository}}
       - name: Set up JDK 11
         uses: actions/setup-java@v1
         with:
