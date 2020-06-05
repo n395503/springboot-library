@@ -14,7 +14,8 @@ jobs:
       - uses: benauca/action-git@develop
         env:
           DRONE_REMOTE_URL: https://github.com/benauca/springboot-library.git
-          DRONE_COMMIT_BRANCH: develop 
+          DRONE_COMMIT_BRANCH: develop
+          DRONE_COMMIT_SHA: d8b0b44fb361786c5d5444c4cde0b930127d2cc4
       - uses: actions/upload-artifact@v2
         with:	
           name: ${{ env.name }}-name	
