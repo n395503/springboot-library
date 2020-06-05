@@ -13,7 +13,7 @@ jobs:
       #- uses: actions/checkout@v1
       - uses: benauca/action-git@develop
         env:
-          DRONE_REMOTE_URL: ${{github.repository}}
+          DRONE_REMOTE_URL: https://github.com/benauca/springboot-library.git
           DRONE_COMMIT_BRANCH: develop 
       - uses: actions/upload-artifact@v2
         with:	
