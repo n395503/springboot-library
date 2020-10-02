@@ -34,4 +34,5 @@ jobs:
         run: |
           jfrog rt config --url=https://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --interactive=false
           jfrog rt mvn install --build-name=BUILD_NAME --build-number=1.1.2
-          jfrog rt mvn deploy
+
+        #jfrog rt mvn deploy
