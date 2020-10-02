@@ -31,4 +31,4 @@ jobs:
       - name: Install Jfrog
         uses: jfrog/setup-jfrog-cli@v1
       - name: Get Version
-        run: jfrog --version
+        run: jfrog rt mvn clean verify
