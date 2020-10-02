@@ -33,6 +33,6 @@ jobs:
           echo test, and deploy your project.
       - name: JFrog ping
         uses: jfrog/setup-jfrog-cli@v1
-        run: jfrog --version
+        #run: jfrog --version
 
 
