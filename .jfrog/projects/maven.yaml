@@ -1,8 +1,10 @@
 version: 1
 type: maven
 resolver:
+  serverId: sntdrctopoc
   snapshotRepo: libs-snapshot
   releaseRepo: libs-release
 deployer:
+  serverId: sntdrctopoc
   snapshotRepo: libs-snapshot
   releaseRepo: libs-release
