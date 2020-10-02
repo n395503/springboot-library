@@ -32,5 +32,5 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v1
       - name: Get Version
         run: |
-          jfrog rt config --url=http://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --interactive=false
+          jfrog rt config --url=https://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --interactive=false
           jfrog rt mvn clean
