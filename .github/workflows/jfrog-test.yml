@@ -28,6 +28,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Jfrog
-      - uses: jfrog/setup-jfrog-cli@v1
-      - run: jfrog --version
+      - name: Install Jfrog
+        uses: jfrog/setup-jfrog-cli@v1
+      - name: Get Version
+        run: jfrog --version
