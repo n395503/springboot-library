@@ -31,4 +31,4 @@ jobs:
       - name: Install Jfrog
         uses: jfrog/setup-jfrog-cli@v1
       - name: Get Version
-        run: jfrog rt mvn "clean -f pom.xml" --url=http://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --build-name=mybuild --build-number=1
+        run: jfrog rt mvn "clean -f pom.xml" --build-url=http://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --build-name=mybuild --build-number=1
