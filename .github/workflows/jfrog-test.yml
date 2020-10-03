@@ -33,5 +33,5 @@ jobs:
       - name: Get Version
         run: |
           jfrog rt config sntdrctopoc --url=https://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --interactive=false
-          jfrog rt mvn install --build-name=BUILD_NAME --build-number=1.1.2
-          jfrog rt mvn deploy
+          jfrog rt mvn install --build-name={{ github.repository }} --build-number=$BUILD_NUMBER
+          jfrog rt u "*.jar" libs-snapshot --build-name={{ github.repository }} --build-number=$BUILD_NUMBER
