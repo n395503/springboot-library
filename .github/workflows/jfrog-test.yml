@@ -34,6 +34,6 @@ jobs:
         run: |
           jfrog rt config sntdrctopoc --url=https://sntdrctopoc.jfrog.io/artifactory --user=${{secrets.JFROG_API_USER}} --password=${{secrets.JFROG_API_KEY}} --interactive=false
           jfrog rt mvn install --build-name=${{ github.repository }} --build-number=${{github.run_number}}
-          jfrog rt u "*.jar" libs-snapshot --build-name=${{ github.repository }} --build-number=${{github.run_number}}
+          jfrog rt u "*.jar" libs-snapshot --build-name=${{ github.repository }} --build-number=${{github.run_number}} --props "key1=${{secrets.JFROG_API_USER}};build-number=${{github.run_number}};key2=${{secrets.JFROG_API_KEY}}"
           jfrog rt bce ${{ github.repository }} ${{github.run_number}}
           jfrog rt bp ${{ github.repository }} ${{github.run_number}}
